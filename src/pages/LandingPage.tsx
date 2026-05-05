@@ -1,8 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { Search, Image as ImageIcon } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
     const [visible, setVisible] = useState(false);
+    const [cardsVisible, setCardsVisible] = useState(false);
+    const cardsRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) setCardsVisible(true); },
+            { threshold: 0.15 }
+        );
+        if (cardsRef.current) observer.observe(cardsRef.current);
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const timer = setTimeout(() => setVisible(true), 100);
@@ -67,9 +78,16 @@ const LandingPage: React.FC = () => {
                         <div className="w-12 h-px bg-[#C9A84C] mx-auto mt-6"/>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Card 1 */}
                         <div
-                            className="group bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                            style={{
+                                opacity: cardsVisible ? 1 : 0,
+                                transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)',
+                                transition: 'opacity 0.7s ease 0s, transform 0.7s ease 0s'
+                            }}
+                            className="group rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border-2 border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                        >
                             <div
                                 className="w-16 h-16 rounded-full bg-[#F7E7CE] flex items-center justify-center mb-6 text-[#C9A84C] group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
                                 <Search size={28}/>
@@ -83,8 +101,15 @@ const LandingPage: React.FC = () => {
                             </p>
                         </div>
 
+                        {/* Card 2 */}
                         <div
-                            className="group bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                            style={{
+                                opacity: cardsVisible ? 1 : 0,
+                                transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)',
+                                transition: 'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s'
+                            }}
+                            className="group rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border-2 border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                        >
                             <div
                                 className="w-16 h-16 rounded-full bg-[#F7E7CE] flex items-center justify-center mb-6 text-[#C9A84C] group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
                                 <ImageIcon size={28}/>
