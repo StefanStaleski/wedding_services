@@ -101,6 +101,7 @@ const GalleryPage: React.FC = () => {
                                 ? navigator.share({ title: `${wedding.bride_name} & ${wedding.groom_name}`, url: window.location.href })
                                 : navigator.clipboard.writeText(window.location.href).then(() => {
                                     setCopied(true);
+                                    toast.success("Копирано!");
                                     setTimeout(() => setCopied(false), 2000);
                                 });
                         }}
