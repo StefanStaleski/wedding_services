@@ -87,7 +87,7 @@ const LandingPage: React.FC = () => {
                             style={{ opacity: cardsVisible ? 1 : 0, transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)', transition: 'opacity 0.7s ease 0s, transform 0.7s ease 0s' }}
                             className="group flex flex-col items-center text-center py-8 px-4"
                         >
-                            <div className="w-14 h-14 border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
+                            <div className="w-14 h-14 border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
                                 <Search size={22} strokeWidth={1.5} />
                             </div>
                             <h3 className="text-2xl font-serif font-light text-[#2C2C2C] mb-3">Распоред на Седење</h3>
@@ -103,7 +103,7 @@ const LandingPage: React.FC = () => {
                             style={{ opacity: cardsVisible ? 1 : 0, transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)', transition: 'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s' }}
                             className="group flex flex-col items-center text-center py-8 px-4"
                         >
-                            <div className="w-14 h-14 border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
+                            <div className="w-14 h-14 border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
                                 <ImageIcon size={22} strokeWidth={1.5} />
                             </div>
                             <h3 className="text-2xl font-serif font-light text-[#2C2C2C] mb-3">Дигитална Галерија</h3>
