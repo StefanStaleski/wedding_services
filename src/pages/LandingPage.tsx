@@ -72,60 +72,52 @@ const LandingPage: React.FC = () => {
             </section>
 
             {/* Features Section */}
-            <section className="py-32 px-6 flex-grow bg-[#FDFAF5]">
+            <section className="py-32 px-6 bg-[#FDFAF5]">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
+
+                    <div className="text-center mb-20">
                         <p className="text-xs uppercase tracking-[0.4em] text-[#C9A84C] mb-4">Услуги</p>
                         <h2 className="text-4xl font-serif font-light text-[#2C2C2C]">Се на едно место</h2>
-                        <div className="w-12 h-px bg-[#C9A84C] mx-auto mt-6"/>
+                        <div className="w-12 h-px bg-[#C9A84C] mx-auto mt-6" />
                     </div>
 
-                    <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Card 1 */}
+                    <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] md:gap-x-16">
+
                         <div
-                            style={{
-                                opacity: cardsVisible ? 1 : 0,
-                                transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)',
-                                transition: 'opacity 0.7s ease 0s, transform 0.7s ease 0s'
-                            }}
-                            className="group rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border-2 border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                            style={{ opacity: cardsVisible ? 1 : 0, transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)', transition: 'opacity 0.7s ease 0s, transform 0.7s ease 0s' }}
+                            className="group flex flex-col items-center text-center py-8 px-4"
                         >
-                            <div
-                                className="w-16 h-16 rounded-full bg-[#F7E7CE] flex items-center justify-center mb-6 text-[#C9A84C] group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
-                                <Search size={28}/>
+                            <div className="w-14 h-14 border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
+                                <Search size={22} strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-serif mb-4">Распоред на Седење</h3>
-                            <div className="w-8 h-px bg-[#C9A84C]/40 mb-4"/>
+                            <h3 className="text-2xl font-serif font-light text-[#2C2C2C] mb-3">Распоред на Седење</h3>
+                            <div className="w-8 h-px bg-[#C9A84C]/50 mb-4" />
                             <p className="text-gray-500 font-light leading-relaxed">
-                                Беспрекорна организација без хартиени списоци. Вашиот дигитален распоред на седење им
-                                овозможува на гостите веднаш да ја пронајдат својата маса. Елегантно, модерно и без
-                                мешаници пред влезот.
+                                Беспрекорна организација без хартиени списоци. Вашиот дигитален распоред им овозможува на гостите веднаш да ја пронајдат својата маса. Елегантно, модерно и без мешаници.
                             </p>
                         </div>
 
-                        {/* Card 2 */}
+                        <div className="hidden md:block self-stretch bg-[#C9A84C]/20" />
+
                         <div
-                            style={{
-                                opacity: cardsVisible ? 1 : 0,
-                                transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)',
-                                transition: 'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s'
-                            }}
-                            className="group rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border-2 border-[#F7E7CE]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                            style={{ opacity: cardsVisible ? 1 : 0, transform: cardsVisible ? 'translateY(0)' : 'translateY(28px)', transition: 'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s' }}
+                            className="group flex flex-col items-center text-center py-8 px-4"
                         >
-                            <div
-                                className="w-16 h-16 rounded-full bg-[#F7E7CE] flex items-center justify-center mb-6 text-[#C9A84C] group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
-                                <ImageIcon size={28}/>
+                            <div className="w-14 h-14 border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 group-hover:bg-[#C9A84C] group-hover:text-white transition-colors duration-300">
+                                <ImageIcon size={22} strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-serif mb-4">Дигитална Галерија</h3>
-                            <div className="w-8 h-px bg-[#C9A84C]/40 mb-4"/>
+                            <h3 className="text-2xl font-serif font-light text-[#2C2C2C] mb-3">Дигитална Галерија</h3>
+                            <div className="w-8 h-px bg-[#C9A84C]/50 mb-4" />
                             <p className="text-gray-500 font-light leading-relaxed">
-                                Погледнете ја прославата низ очите на вашите гости. Дозволете им директно од својот
-                                телефон да ги споделат фотографиите со вас во реално време.
+                                Погледнете ја прославата низ очите на вашите гости. Дозволете им директно од телефонот да ги споделат фотографиите со вас во реално време.
                             </p>
                         </div>
+
                     </div>
                 </div>
             </section>
+
+
 
             {/* Footer */}
             <footer className="relative bg-[#1F1F1F] text-white/70 border-t border-white/10">
