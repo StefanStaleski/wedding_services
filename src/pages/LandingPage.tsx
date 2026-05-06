@@ -28,9 +28,9 @@ const LandingPage: React.FC = () => {
                     className="absolute inset-0 w-full h-full object-cover scale-105"
                     autoPlay
                     muted
-                    loop
+                    // loop
                     playsInline
-                    src="https://assets.mixkit.co/videos/preview/mixkit-wedding-rings-on-a-table-41793-large.mp4"
+                    src="/luxury-table-2.mp4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"/>
 
