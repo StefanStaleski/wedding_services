@@ -24,12 +24,14 @@ const LandingPage: React.FC = () => {
         <div className="min-h-screen bg-[#FDFAF5] font-sans text-[#2C2C2C] flex flex-col">
             {/* Hero Section */}
             <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+
                 <video
                     className="absolute inset-0 w-full h-full object-cover scale-105"
                     autoPlay
                     muted
                     // loop
                     playsInline
+                    poster="/hero_poster.jpg"
                     src="/hero_section.mp4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"/>
@@ -74,7 +76,7 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
                         <p className="text-xs uppercase tracking-[0.4em] text-[#C9A84C] mb-4">Услуги</p>
-                        <h2 className="text-4xl font-serif font-light text-[#2C2C2C]">Сè на едно место</h2>
+                        <h2 className="text-4xl font-serif font-light text-[#2C2C2C]">Се на едно место</h2>
                         <div className="w-12 h-px bg-[#C9A84C] mx-auto mt-6"/>
                     </div>
 
