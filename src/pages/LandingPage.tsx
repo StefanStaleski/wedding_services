@@ -30,7 +30,7 @@ const LandingPage: React.FC = () => {
                     muted
                     // loop
                     playsInline
-                    src="/luxury-table-2.mp4"
+                    src="/hero_section.mp4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"/>
 
